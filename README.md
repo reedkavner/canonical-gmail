@@ -19,7 +19,7 @@ including Google Apps addresses with custom domains, to its simplest, canonical 
 (E.g., exam.ple+foo@googlemail.com becomes example@gmail.com) so that it can be compared 
 against other canonical addresses.
 
-The canonical address should not be stored in lieu of the user's inputed address, as some
+**The canonical address should not be stored in lieu of the user's inputed address**, as some
 folks use these modifications to route their incoming email to particular folders.These Gmail 
 power users can be a persnickety bunch. Don't mess up their system.
 
