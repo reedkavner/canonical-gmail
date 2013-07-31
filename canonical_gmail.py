@@ -47,16 +47,19 @@ def normalize(email):
 
 #This function evaluates whether or not an email address resides on a Gmail server
 def is_gmail_server(domain, tld):
+    is_gmail = False
     if domain == 'gmail':
         is_gmail = True
     
     else:
-        is_gmail = False
-        for i in dns.resolver.query(domain+'.'+tld, 'MX'):
-            if "ASPMX.L.GOOGLE.COM" in i.to_text().upper():
-                is_gmail = True
-                break
-
+        try:
+            for i in dns.resolver.query(domain+'.'+tld, 'MX'):
+                if "ASPMX.L.GOOGLE.COM" in i.to_text().upper():
+                    is_gmail = True
+                    break
+        except:
+            return False
+            
     return is_gmail
     
     
