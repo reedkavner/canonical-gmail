@@ -1,4 +1,4 @@
-canonical-gmail
+canonical_gmail.py
 ===============
 
 When evaluating the addresses of incoming mail, Gmail servers...
